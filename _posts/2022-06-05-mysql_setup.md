@@ -5,9 +5,7 @@
 
 아직 homebrew가 설치되어 있지 않다면
 
- https://brew.sh/index_ko
-
-링크를 통해 설치가 가능합니다. 
+[링크](https://brew.sh/index_ko)를 통해 설치가 가능합니다. 
 
 설치 후, command + space bar를 눌러 터미널을 실행시킵니다.
 
@@ -121,9 +119,8 @@ mysql.server stop
 
 ## 워크벤치 설치
 
-https://downloads.mysql.com/archives/workbench/
 
-1. 위 링크에 접속하여 사양과 버전에 맞는 파일을 다운로드합니다.
+1. [링크](https://downloads.mysql.com/archives/workbench/)에 접속하여 사양과 버전에 맞는 파일을 다운로드합니다.
 
 ![homepage](https://user-images.githubusercontent.com/101630615/172042082-7c694876-7e8c-4bf3-89f6-7e7172cce5eb.png)
 
