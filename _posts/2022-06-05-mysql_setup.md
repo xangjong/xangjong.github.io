@@ -1,7 +1,3 @@
-----
-layout : single
-title : "mysql_setup"
-----
 
 # MySQL 설치
 
