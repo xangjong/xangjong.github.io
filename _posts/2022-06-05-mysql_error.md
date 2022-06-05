@@ -57,7 +57,7 @@ flush privileges;
 
 
 
-출처 : [글](https://toytvstory.tistory.com/1617)
+출처 : [글](https://toytvstory.tistory.com/1617)을 보고 참고했습니다.
 
 
 
