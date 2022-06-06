@@ -59,9 +59,9 @@ macOS 용 패키지 관리자입니다. 터미널(Terminal)에서 명령어를 �
 아래는 그 이외의 단축키입니다.
 
 ```zsh
-- brew ~ : 커맨드 라인 프로그램 (c, java, python)
+brew ~ : 커맨드 라인 프로그램 (c, java, python)
 
-- brew cask ~ : GUI 프로그램 (Safari, Chrome, Word)
+brew cask ~ : GUI 프로그램 (Safari, Chrome, Word)
 
 brew update : 홈브류 최신버전으로 업데이트
 
