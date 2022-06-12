@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "1 Day, 1 Commit"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "XangJong"
+name                     : "xangJong"
 description              : "Keep Going"
 url                      : "https://xangjong.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
