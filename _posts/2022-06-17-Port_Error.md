@@ -59,3 +59,6 @@ kill 3993
 <img width="713" alt="terminal2" src="https://user-images.githubusercontent.com/101630615/174284561-9df45d90-bbf9-422d-b90b-f5367972e8c0.png">
 
 재시작하면 톰캣이 다시 작동하는 것을 볼 수 있습니다.
+
+
+출처 : https://abit.ly/4jfcyq
