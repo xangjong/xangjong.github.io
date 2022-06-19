@@ -1,4 +1,4 @@
-# mysql 오류 & 해결 방법
+# [MySQL] 오류 & 해결 방법
 
 ### mysql 접속 오류
 
@@ -57,7 +57,7 @@ flush privileges;
 
 
 
-출처 : [글](https://toytvstory.tistory.com/1617)을 보고 참고했습니다.
+[출처] : [https://toytvstory.tistory.com/1617](https://toytvstory.tistory.com/1617 ) 
 
 
 

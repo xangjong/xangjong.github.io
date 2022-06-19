@@ -1,4 +1,4 @@
-# Hombrew
+# [Mac] Hombrew
 
 >  Homebrew(흠브루) 란?
 
