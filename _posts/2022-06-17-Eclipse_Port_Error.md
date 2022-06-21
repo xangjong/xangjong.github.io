@@ -1,4 +1,6 @@
-# Mac Tomcat Port 8080 Error
+
+
+# [Eclipse] Mac Tomcat Port 8080 Error
 
 > IDE로 톰캣을 실행한 상태에서 응답없음으로 인해 강제 종료 후,
 >
@@ -37,7 +39,11 @@ ex )
 sudo lsof -i:8080
 ```
 
-<img width="776" alt="terminal" src="https://user-images.githubusercontent.com/101630615/174284558-a431e224-a1de-4b7f-8dbc-c324e8fe65e9.png">저는 Port 8080을 조회하기 위해 입력하였습니다.
+<img width="776" alt="terminal" src="https://user-images.githubusercontent.com/101630615/174284558-a431e224-a1de-4b7f-8dbc-c324e8fe65e9.png">
+
+
+
+저는 Port 8080을 조회하기 위해 입력하였습니다.
 
 비밀번호는 화면에 표시되지 않으니 사용하는 mac의 계정 비밀번호를 입력하면 됩니다.
 
