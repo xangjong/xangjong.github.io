@@ -184,9 +184,7 @@
 - 헤더 설정, 코드 상태, 쿠키 등 정보 포함되어 있음
 - 응답 콘텐츠 설정, 응답 헤더 설정, 상태 코드 설정과 관련된 메소드 제공
 
-**![img](https://lh3.googleusercontent.com/IZ6sv9biNF-MUVGn_u8JuFuG-MI_n39m3RjCnQuwumLIK5ppyXhUAreuqnFpb_Z6sEFseHd8muMKcyLjnJkwm3Wd0vO2kzGmZXncl2SsLVykIBlndFW1xoBkh3YA6aVHkzr0eujM)**
-
-
+<img width="600" alt="image-20220701004711859" src="https://user-images.githubusercontent.com/101630615/176721174-bdb61cc2-7dff-441b-93e2-3ec7d87dd200.png">
 
 
 
@@ -234,11 +232,13 @@
 
 
 
-**![img](https://lh4.googleusercontent.com/c-VyZXw6BveZ1BKAf6vXe_sWHE7thukPyzJb9FMgJnMLz-r65RogD1bCVLBoLzRDxW2eTA6CuSRl5C6LGQ6fRAFAtc2qs5Aokf9Rsk08UjT0k7AyI_8_fr2GH3_eagYSuegMpGT7)**
+<img width="600" alt="image-20220701004744519" src="https://user-images.githubusercontent.com/101630615/176721193-3c800480-21a8-409c-a68a-18fdb3af2c2f.png">
 
 
 
-**![img](https://lh3.googleusercontent.com/YsMqIyiDk2S4fOknS08KDrFXBkKoMhZq2rYXprlhKHGqANmAQnPlh_ogVzB_zZIW8WwcYYC9oEnqf52TQVfXa6WiE-Ly1W_XrOeqBgHltnDY8ReStlBOftIpM_Ib1tjflK8nriqc)**
+<img width="500" alt="image-20220701004753544" src="https://user-images.githubusercontent.com/101630615/176721211-8cc99244-e228-447b-9c99-9b6da973d674.png">
+
+
 
 
 
@@ -302,9 +302,7 @@
 
 
 
-**![img](https://lh5.googleusercontent.com/V0GGerXgRzLrEB5uA-LecBULeG2NzX-KS2f83Z57GIzpO97g1biu4cRb2IR23gOIH02GMatvDMSTBewpsCsea5n37cne69OuHuUgrZ4O5vbfpjrlntLyGnZpE5545k5eFqRlMW9E)**
-
-
+<img width="500" alt="image-20220701004807031" src="https://user-images.githubusercontent.com/101630615/176721226-e8d1bc0f-c181-4717-9a52-5e29f2f03bb2.png">
 
 
 
@@ -313,7 +311,9 @@
 - 프로퍼티(속성) 값을 설정할 때 사용
 - 데이터 설정(저장)
 
-**![img](https://lh5.googleusercontent.com/kC4mk4safnLhYcLpeidHI115rMTKRqnaoY_sh_ruJddCnuOIc57fbHg0MOWrmliEduxdBkM_G6Oo7dL76zFZUCr_-lWQpVNVE7bhNaLf6u24IyBHOJNiVzN2lGWLO92g0p671GIQ)**
+<img width="500" alt="image-20220701004814321" src="https://user-images.githubusercontent.com/101630615/176721232-5e156fe9-207b-4feb-90a8-850252f17351.png">
+
+
 
 
 
@@ -323,9 +323,7 @@
 
 
 
-**![img](https://lh4.googleusercontent.com/Z6O17O5umAfvW32jLe10tA_k815DOF0oZ-Z-jQA_9IUReFYl43qE7vbSRhauz3gYIoYoLQN21YD9-r2bT5ZsZJQIiJ3loP-TNrE-DIn8nG-rDvd6uvFNCe-pbOzusBHcTYIRVWZe)**
-
-
+<img width="500" alt="image-20220701004826090" src="https://user-images.githubusercontent.com/101630615/176721240-273dc227-fbc1-4770-a98d-9a7a5a7a3f3d.png">
 
 #### 모든 속성을 한꺼번에 설정
 

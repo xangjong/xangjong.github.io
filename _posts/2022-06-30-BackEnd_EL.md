@@ -44,7 +44,9 @@
 
 ### EL 내장 객체
 
-![image-20220701000717161](BackEnd_EL.assets/image-20220701000717161.png)
+
+
+<img width="500" alt="image-20220701000717161" src="https://user-images.githubusercontent.com/101630615/176720101-651e47ca-8f80-429d-a5e7-5128262dfba8.png">
 
 
 

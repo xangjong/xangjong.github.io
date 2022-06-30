@@ -31,7 +31,7 @@
 
 ### JSTL 라이브러리 : 5개의 라이브러리로 구성
 
-![image-20220701000809283](BackEnd_JSTL.assets/image-20220701000809283.png)
+<img width="452" alt="image-20220701000809283" src="https://user-images.githubusercontent.com/101630615/176719991-45279c63-7753-4144-bc80-3d75b2d26a9b.png">
 
 ### Core (코어)
 
