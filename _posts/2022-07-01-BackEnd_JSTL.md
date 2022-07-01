@@ -117,3 +117,33 @@
 
 - 쿼리 파라미터로 부터 URL을 생성
 
+##### ``<c:forEach>``
+
+- 반복문 수행
+
+```jsp
+<c:forEach  var=”변수명” begin=”시작값” end=”마지막값” step=”증가값” varStatus=”반복상태변수명”>
+```
+
+- varStatus : 반복상태 속성 지정 
+  - Index
+    - items에서 정의한 항목을 가리키는 index 번호
+    - 기본 0부터 시작
+    - begin=1로 하면 index도 1부터 시작
+  - count : 몇 번째인지 표시. 1부터 시작 
+  - first : 첫 번째이면 true
+  - last : 마지막 반복이면 true
+
+
+
+#### 포매팅 태그 라이브러리
+
+- 숫자 및 날짜와 관련된 포매팅 태그 라이브러리
+- 라이브러리 : format
+- prefix : fmt
+- uri : ``http://java.sun.com/jsp/jstl/fmt``
+- 형식
+  - ``<fmt:formatNumber>``
+  - ``<fmt:formatDate>``
+  - ``<fmt:timeZone>``
+
