@@ -80,5 +80,64 @@ sudo /Library/Tomcat/bin/shutdown.sh
 
 
 
-출처 : [https://es2sun.tistory.com/188](https://es2sun.tistory.com/188)  [https://clgnsdl94.tistory.com/42](https://clgnsdl94.tistory.com/42)
 
+
+이제 이클립스에 적용해봅시다.
+
+
+
+1. 이클립스 실행 후 우측 상단 open perspective 클릭 
+
+Java EE(default)를 클릭 -> Severs 탭 활성화
+
+<img width="138" alt="스크린샷 2022-07-04 오전 9 58 28" src="https://user-images.githubusercontent.com/101630615/177067498-9870046f-8bc4-42f2-9a53-2c52a33d1668.png">
+
+
+
+<img width="633" alt="스크린샷 2022-07-04 오전 10 06 27" src="https://user-images.githubusercontent.com/101630615/177067496-97998f1c-9306-4494-9b6a-218be46131ad.png">
+
+저는 이미 설치되어 있어서 톰캣 버전이 나오나 처음 설치하시는 분들은
+
+
+
+![image-503](https://user-images.githubusercontent.com/101630615/177067756-f1d06ff6-e6d1-4c82-896e-05a755e4d80a.png)
+
+
+
+이런 창이 나올 것입니다. 
+
+
+
+클릭하시면 
+
+<img width="589" alt="스크린샷 2022-07-04 오전 10 37 31" src="https://user-images.githubusercontent.com/101630615/177067490-1c747e78-da95-479e-974d-d0330ca33b62.png">
+
+
+
+설치한 버전에 맞게 톰캣 버전을 선택하시면 됩니다.(저는 9를 선택했습니다.)
+
+
+
+<img width="589" alt="스크린샷 2022-07-04 오전 10 37 45" src="https://user-images.githubusercontent.com/101630615/177067481-c37d07cf-ad82-4d94-80fc-db2e3248bd68.png">
+
+
+
+톰캣의 경로를 지정해줘야 합니다.
+
+Browse 버튼을 눌러 톰캣을 설치한 경로에 맞춰 경로를 지정해줍니다.
+
+신규 경로를 지정해주고 실행하면 됩니다. 
+
+
+
+톰캣의 버전을 변경하는 경우 
+
+Preferences -> Server -> Runtime Environments 창에서 언제든 변경, 추가, 삭제 가능합니다.
+
+<img width="630" alt="스크린샷 2022-07-04 오전 10 37 05" src="https://user-images.githubusercontent.com/101630615/177067495-53be10a2-c293-46cd-9536-1bcd2531bee5.png">
+
+
+
+출처 : [https://es2sun.tistory.com/188](https://es2sun.tistory.com/188) , [https://clgnsdl94.tistory.com/42](https://clgnsdl94.tistory.com/42)
+
+​		[https://goldsony.tistory.com/26](https://goldsony.tistory.com/26) , [https://playcode.tistory.com/20](https://playcode.tistory.com/20)
