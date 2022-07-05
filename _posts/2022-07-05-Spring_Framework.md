@@ -1,6 +1,6 @@
 
 
-# [BackEnd] 스프링 프레임워크 
+# [Spring] 스프링 프레임워크
 
 
 
@@ -59,16 +59,16 @@
 
 
 
-#### 스프링 프레임 워크의 특징
+#### <span style=color:blue>스프링 프레임 워크의 특징</span>
 
-- POJO 기반 프레임워크
+- <span style=color:red>POJO 기반 프레임워크</span>
   - 자바 객체의 라이프사이클을 스프링 컨테이너가 직접 관리하고 
   - 스프링 컨테이너로부터 필요한 객체를 얻어 옴
-- DI (Dependency Injection) 지원
+- <span style=color:red>DI (Dependency Injection) 지원</span>
   - 의존성 주입
   - 각 계층이나 서비스들 사이 또는 객체들 사이의 의존성이 존재할 경우에
   - 스프링 프레임워크가 서로 연결시켜 줌 (클래스 간 약한 결합 가능)
-- AOP (Aspect Oriented Programming) 지원
+- <span style=color:red>AOP (Aspect Oriented Programming) 지원</span>
   - 관점 지향 프로그래밍
   - 트랜잭션 로깅, 보안 등 여러 모듈에서 공통적으로 지원하는 기능을 분리하여 사용 가능
   - 반복적인 코드를 줄이고 개발자가 비즈니스 로직에만 집중할 수 있도록 지원
@@ -82,15 +82,15 @@
 
 ### 스프링 프레임워크의 핵심 기능
 - 의존관계에 있는 객체를 생성 조립해 주는 기능
-- DI (Dependency Injection) : 의존성 주입
+- <span style=color:red>DI (Dependency Injection) : 의존성 주입</span>
   - 객체 간의 의존성을 개발자가 설정하는 것이 아니라
   - 스프링 컨테이너가 주입시켜 주는 기능
   - 장점 : 객체를 쉽게 확장하고 재사용할 수 있음
-- IoC (Inversion of Control) : 제어의 역전 
+- <span style=color:red>IoC (Inversion of Control) : 제어의 역전 </span>
 
 
 
-#### DI (Dependency Injection) : 의존성 주입
+#### <span style=color:blue>DI (Dependency Injection) : 의존성 주입</span>
 
 - 객체 간의 의존성을 개발자가 설정하는 것이 아니라
 - 스프링 컨테이너가 주입시켜 주는 기능
@@ -129,17 +129,26 @@
 
 
 
+#### <span style=color:blue>IoC (Inversion of Control) : 제어의 역전 </span>
+
+- 객체에 대한 제어권 문제
+- 기존에는 개발자에게 제어권이 있었음
+- new 연산자를 사용해서 객체 생성
+- 스프링 프레임워크에서는 객체의 제어권이 스프링에 있고
+- 인스턴스의 라이프 사이클(생성에서 소멸까지)을 개발자가 아닌 스프링 프레임워크에서 담당
+
+
+
 #### (1) 스프링을 사용하지 않는 DI (DI를 사용하는 코드)
 
--	(1-1) 생성자 기반 DI
+-	<span style=color:red>(1-1) 생성자 기반 DI</span>
   -	의존성 관계에 있는 객체를 new를 통해 직접 생성하지 않고
   -	생성자를 통해 외부에서 전달 (주입 : injection)
 
 
 
--	(1-2) Setter 기반 DI
-
-  -	Setter 메소드를 이용하여 의존성 주입 수행
+-	<span style=color:red>(1-2) Setter 기반 DI</span>
+-	Setter 메소드를 이용하여 의존성 주입 수행
 
 
 
@@ -161,7 +170,7 @@
 
 
 
-#### (2-2)XML을 이용한 DI - 생성자 기반 DI
+#### (2-2) XML을 이용한 DI - 생성자 기반 DI
 
 -	클래스에 생성자가 있어야 하고 스프링 설정 파일(xml)에서 빈을 정의할 때
 -	``<constructor-arg ref=”의존하는 bean”>`` 태그를 이용하여 의존성 주입
@@ -172,15 +181,122 @@
 
 
 
-#### IoC (Inversion of Control) : 제어의 역전 
+#### Annotation을 이용한 DI
 
-- 객체에 대한 제어권 문제
-- 기존에는 개발자에게 제어권이 있었음
-- new 연산자를 사용해서 객체 생성
-- 스프링 프레임워크에서는 객체의 제어권이 스프링에 있고
-- 인스턴스의 라이프 사이클(생성에서 소멸까지)을 개발자가 아닌 스프링 프레임워크에서 담당
+- xml 설정 파일에서 ``<bean>`` 태그를 이용해서 설정하였던 빈 설정을
+- Annotation(메타데이터)을 이용해서 자바 코드에서 설정
+  - 예 : xml 설정 파일에서 빈을 설정하지 않고 스프링 자바 소스 코드를 읽어서
+  - 클래스에 @Componet 어노테이션이 붙은 클래스를 객체화 (bean 설정)
+  - A1 클래스의 객체를 A2 클래스의 객체로 변경하려면 A1 클래스에서 @Component를 제거하고 A2 클래스에 
+  - @Component를 붙이면 됨
+  - @Autowired 어노테이션을 사용하여 bean을 자동 삽입
 
 
 
+#### <span style=color:blue>xml 설정 파일에 context 네임스페이스 추가</span>
+
+- 빈 설정을 위한 어노테이션을 사용하기 위해서는
+- 설정 파일에 context 네임스페이스가 추가되어있어야 함 ([Namespaces] 탭에서 추가
+- ``<context:component-scan>`` 태그를 이용하여 빈으로 등록된 클래스를 찾아서(scan) 클래스를 객체화(빈 설정)
+
+
+
+#### 스프링에서 사용하는 Annotation
+
+##### <span style=color:blue>Annotation 종류</span>
+
+- <span style=color:blue>DI(의존성 주입) 관련 Annotation</span>
+
+  - <span style=color:red>@Autowired</span> / @Inject
+
+  - <p style=color:red>@Qualifier
+
+  - @Resource
+
+- <span style=color:blue>빈 생성 관련 Annotation</span>
+
+- <p style=color:red>@Component
+
+  - <span style=color:red>@Controller</span>
+  - <span style=color:red>@Service</span>
+  - <span style=color:red>@Repository</span>
+
+- @Configureation
+
+  - @Bean
+
+- Spring MVC 
+
+
+
+#### DI(의존성 주입) 관련 Annotation
+
+- xml 설정 파일에 있는 ``<bean>``에 대해 DI하거나
+- 자바 코드에서 생성된 bean에 대해 DI할 수 있음
+- <span style=color:red>@Autowired</span>	
+  - 타입을 기준으로 의존성 주입
+  - 스프링 빈에 의존하는 <span style=color:blue>다른 빈을 자동으로 주입</span>할 때 사용
+  - 스프링에서 지원
+- <span style=color:red>@ Inject </span>
+  - @Autowired와 동일
+  - 자바에서 지원
+- <span style=color:red>@Qualifier</span>
+  - <span style=color:red>특정 빈의 이름을 지정</span>
+  - <span style=color:blue>동일한 interface 구현한 클래스가 여러 개 있는 경우</span>
+  - 사용하고자 하는 빈의 이름을 지정할 때 사용
+  - 설정 파일 : ``<bean>`` 추가
+- <span style=color:red>@Resource</span>
+  - <span style=color:red>@Autowired</span>와 <span style=color:red>@Qualifier</span>를 같이 사용하는 것과 동일
+  - @Resorce(name=”빈 이름”)
+  - 자바에서 지원
+  - pom.xml에 라이브러리 추가 
+    - javax.annotation
+
+
+
+#### 빈 생성 관련 Annotation
+
+- 빈 생성(설정)을 위해 클래스 위에 추가되는 어노테이션
+- 클래스 이름 위에 붙이면 클래스 파일에 대한 bean이 자동 생성(xml 파일에서 bean 생성 X)
+- 빈의 이름은 <span style=color:red>클래스 이름에서 첫 문자만 소문자</span>로 지정
+- 어노테이션을 이용하기위해 xml 설정 파일에서 필요한 작업 
+  - xml 설정 파일에 context 네임스페이스 추가 필요
+  - <<span style=color:red>context-component-scan</span> <span style=color:blue>base-package="패키지명"</span>>
+    - @Component  어노테이션이 적용된 클래스를 빈으로 등록
+    - 빈으로 등록될 클래스가 들어 있는 패키지 지정
+    - 상위 패키지를 지정하면 하위 패키지까지 빈으로 등록될 클래스 찾음
+    - ``<context:annotation-config /> `` 필요 X
+
+
+
+#### @Component
+
+- 클래스를 빈으로 등록(부품 등록)
+- 빈 id 지정 가능
+- @Component("빈이름")
+  - ``<bean id="빈이름">``에 해당
+
+
+
+##### @Component 어노테이션의 의미론적 어노테이션
+
+- @Component : 일반적인 컴포넌트 의미
+- 특화된 @Component 어노테이션
+  - 클래스의 역할에 따라 의미론적으로 구분
+    - @Controller 컴포넌트
+    - @Service 컴포넌트
+    - @Repository 컴포넌트
+
+
+
+<img width="452" alt="image-20220705131049795" src="https://user-images.githubusercontent.com/101630615/177247845-b8eb5196-c8de-4ab1-bf3f-8a7d8743d066.png">
+
+
+
+#### Spring MVC 구성에 따른 어노테이션 사용
+
+
+
+<img width="452" alt="image-20220705131054893" src="https://user-images.githubusercontent.com/101630615/177247851-f568aa02-49b1-4bf8-b509-3f44ebcda5d5.png">
 
 
