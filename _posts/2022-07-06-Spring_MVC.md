@@ -204,23 +204,22 @@
 
 ##### View 페이지로 데이터 전달 방법
 
-- Model 사용
-- ModelAndView 사용
+- ``Model`` 사용
+- ``ModelAndView`` 사용
 
 
 
-##### Model 사용
+##### ``Model`` 사용
 - Model 인터페이스
 - Model Attribute 추가하기 위해 고안
 - key/value 형태로 값을 임시 저장
 - Controller에서 Model에 데이터를 저장하고
-- View 이름을 return 하면
-- View 페이지로 Model이 전달되고
+- View 이름을 return 하면 View 페이지로 Model이 전달되고
 - View 페이지에서 key를 사용해서 Model에 저장된 Data 사용
 
 
 
-##### Model 사용 형식
+##### ``Model`` 사용 형식
 
 - 요청 처리 메소드에서 Model 객체를 파라미터로 받아서 
   - ``public String home(Locale locale, Model model) ``
@@ -231,7 +230,7 @@
 
 
 
-##### ModelAndView 사용
+##### ``ModelAndView`` 사용
 
 - ModelAndView 클래스 사용
 - 데이터와 뷰 둘 다 설정
@@ -250,5 +249,117 @@ return mv; // ModelAndView 객체 반환
 - Model과 ModelAndView 같이 사용 가능
 - 동일한 key(이름)이 있는 경우 ModelAndView가 우선
 
+
+
+#### ``@RequestMapping`` 다중 맵핑
+
+- 한 개의 메소드를 여러 요청 경로로 접근 처리 가능
+- ``@RequestMapping(value={“요청경로1”, “요청경로2”})``
+
+
+
+
+
+
+
+### View 페이지에서 컨트롤러로 데이터 전달 
+
+- (1) form을 통한 데이터 전달
+- (2) url을 통한 전달
+
+#### (1) form을 통한 데이터 전달
+
+- form 데이터를 컨트롤러로 전송할 때
+
+- 스프링에서 HTTP 요청 파라미터 가져오는 방법 3가지
+  - (1) getParameter() 메소드 사용
+    - ``request.getParameter(“no”);``
+  - (2) @RequestParam 어노테이션 사용
+  - (3) Command 객체 사용
+
+
+
+***경로 표현 주의!***
+
+```
+<a href="newView">newView 페이지</a>
+```
+
+- 상대경로로 찾기 때문에 현재 경로를 기준으로  newView 요청 경로를 찾음
+- index.jsp에서는 ContextPath(/project)를 기준으로 찾고
+- studentForm.jsp에서는 /project/student를 기준으로 찾음
+- 기준 경로에 따라 페이지를 못 찾을 수 있음
+- 따라서 2가지 방법으로 사용
+  - (1) ContextPath부터 적음
+  - (2) <c:url value=”/”> 사용 (/ :  ContextPath)
+
+
+
+#### (2) ``@RequestParam`` 어노테이션 사용
+
+- 메소드의 파라미터로 설정
+- ``(@RequestParam(“stdNo”) String stdNo, …)``
+
+
+
+
+
+#### (3) Command 객체 사용
+
+- 데이터 저장용 클래스 생성 (Student)
+- 요청을 수행하는 메소드에서 Student 객체 사용 (커맨드 객체)
+- Command 객체는 자동으로 View의 Model에 등록
+- View 페이지에서 ${객체.필드명}
+
+***주의!***
+
+- form의 ``<input>`` 태그의 name 속성명과 Student 클래스의 멤버 필드명이 동일해야 함
+- 이름이 다르면 필드에 값이 저장되지 않음
+
+
+
+#### ``@ModelAttribute`` 어노테이션
+
+- Command 객체 사용 시 Model 설정 이름(객체 이름) 변경 가능
+- ``@ModelAttribute(“stdInfo”)  Student student``
+- ``${stdInfo.stdNo}``
+
+
+
+
+
+#### url을 통한 데이터 전달
+
+- ``@PathVariable`` 어노테이션 사용
+
+```java
+학번 : ${stdNo}
+
+<a href="/project/student/studentDetailView/${stdNo}">${stdNo}</a>
+
+@RequestMapping(“/student/studentDetailView/{stdNo}”)
+
+public String studentDetailView(@PathVariable String stdNo) {... }
+```
+
+
+
+#### HashMap으로 받기
+
+- 여러 개의 값을 HashMap으로 받을 수 있음
+- 검색 조건 : type
+- 검색 값(입력값) : keyword
+
+
+
+#### 컨트롤러
+
+- ``@RequestParam HashMap<String, Object> param``
+
+- 폼 요청 처리
+- 검색조건을 HashMap으로받아서 param 값 콘솔에 출력
+- DB에서 검색 결과 받아 왔다고 가정
+- ArrayList에 담아서 Model 설정
+- View 페이지에서 테이블 형태로 출력
 
 
