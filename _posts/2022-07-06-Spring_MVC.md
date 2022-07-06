@@ -347,6 +347,9 @@ public String studentDetailView(@PathVariable String stdNo) {... }
 #### HashMap으로 받기
 
 - 여러 개의 값을 HashMap으로 받을 수 있음
+- @RequestParam으로 여러 개 받아도 되지만, MyBatis에 전달할 때,
+- 매개변수 2개 이상일 시 반드시 HashMap으로 전달
+
 - 검색 조건 : type
 - 검색 값(입력값) : keyword
 
