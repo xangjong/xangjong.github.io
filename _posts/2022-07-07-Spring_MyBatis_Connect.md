@@ -287,29 +287,29 @@ Mybatis-spring 소스코드
 
 ```
 <!-- 한글설정 -->
-	<filter>
-		<filter-name>encodingFilter</filter-name>
-		<filter-class>
-			org.springframework.web.filter.CharacterEncodingFilter
-		</filter-class>
+<filter>
+   <filter-name>encodingFilter</filter-name>
+   <filter-class>
+      org.springframework.web.filter.CharacterEncodingFilter
+   </filter-class>
 
-		<init-param>
-			<param-name>encoding</param-name>
-			<param-value>UTF-8</param-value>
-		</init-param>
+   <init-param>
+   	<param-name>encoding</param-name>
+   	<param-value>UTF-8</param-value>
+   </init-param>
 
-		<init-param>
-			<param-name>forceEncoding</param-name>
-			<param-value>true</param-value>
-		</init-param>
-	</filter>
+	<init-param>
+  	<param-name>forceEncoding</param-name>
+	  <param-value>true</param-value>
+	</init-param>
+</filter>
 
-	<filter-mapping>
-		<filter-name>encodingFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+<filter-mapping>
+	<filter-name>encodingFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+</filter-mapping>
 
-	<!-- 한글설정 END -->
+<!-- 한글설정 END -->
 ```
 
 
