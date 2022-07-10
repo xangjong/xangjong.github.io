@@ -140,9 +140,9 @@ spring JDBC 의존성 : spring-jdbc 검색 후 5.2.22 RELEASE[jar] 선택 후 OK
 
 ```jsp
 <dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>5.2.22.RELEASE</version>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-jdbc</artifactId>
+  <version>5.2.22.RELEASE</version>
 </dependency>
 ```
 
@@ -164,9 +164,9 @@ Connection Pool 의존성 : commons-dbcp
 
 ```jsp
 <dependency>
-			<groupId>commons-dbcp</groupId>
-			<artifactId>commons-dbcp</artifactId>
-			<version>1.4</version>
+  <groupId>commons-dbcp</groupId>
+  <artifactId>commons-dbcp</artifactId>
+  <version>1.4</version>
 </dependency>
 ```
 
@@ -186,9 +186,9 @@ mysql 의존성 : mysql-connector 8.0.29
 
 ```jsp
 <dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.29</version>
+  <groupId>mysql</groupId>
+  <artifactId>mysql-connector-java</artifactId>
+  <version>8.0.29</version>
 </dependency>
 ```
 
@@ -212,9 +212,9 @@ Mybatis 소스 코드
 
 ```jsp
 <dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis</artifactId>
-			<version>3.5.10</version>
+  <groupId>org.mybatis</groupId>
+  <artifactId>mybatis</artifactId>
+  <version>3.5.10</version>
 </dependency>
 ```
 
@@ -236,9 +236,9 @@ Mybatis-spring 소스코드
 
 ```jsp
 <dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis-spring</artifactId>
-			<version>2.0.7</version>
+  <groupId>org.mybatis</groupId>
+  <artifactId>mybatis-spring</artifactId>
+  <version>2.0.7</version>
 </dependency>
 ```
 
@@ -278,6 +278,39 @@ Mybatis-spring 소스코드
 - 스프링 설정 파일 생성 : application-config.xml
   - DataSource / Mapper 지정
 - web.xml에 변경된 내용 설정
+
+
+
+아래 코드를 복사하여 web.xml ``</web-app>`` 안에 넣어 추가하여
+
+한글 출력을 잘 나오게 합니다.
+
+```
+<!-- 한글설정 -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>
+			org.springframework.web.filter.CharacterEncodingFilter
+		</filter-class>
+
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- 한글설정 END -->
+```
 
 
 
@@ -326,22 +359,22 @@ Application-config.xml 생성 후 하단 Namespaces 탭에서 beans, context, my
 연동 소스코드
 
 ```jsp
-	<context:property-placeholder location="classpath:database/jdbc.properties"/>
-	<context:component-scan base-package="com.spring_mvc.mybatis" />
-	
-	<bean id="dataSource"  class="org.apache.commons.dbcp.BasicDataSource">
-		 <property name="driverClassName" value="${jdbc.driverClassName}" />
-		 <property name="url" value="${jdbc.url}" />
-		 <property name="username" value="${jdbc.username}" />
-		 <property name="password" value="${jdbc.password}" />
-	</bean>
-	
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations" value="classpath:com/spring_mvc/mybatis/**/*.xml" />
-	</bean>
-	
-	<mybatis-spring:scan base-package="com.spring_mvc.mybatis.dao"/>
+<context:property-placeholder location="classpath:database/jdbc.properties"/>
+<context:component-scan base-package="com.spring_mvc.mybatis" />
+
+<bean id="dataSource"  class="org.apache.commons.dbcp.BasicDataSource">
+  <property name="driverClassName" value="${jdbc.driverClassName}" />
+  <property name="url" value="${jdbc.url}" />
+  <property name="username" value="${jdbc.username}" />
+  <property name="password" value="${jdbc.password}" />
+</bean>
+
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+  <property name="dataSource" ref="dataSource" />
+  <property name="mapperLocations" value="classpath:com/spring_mvc/mybatis/**/*.xml" />
+</bean>
+
+<mybatis-spring:scan base-package="com.spring_mvc.mybatis.dao"/>
 ```
 
 
